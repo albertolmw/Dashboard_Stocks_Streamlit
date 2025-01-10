@@ -1,11 +1,11 @@
 import pandas as pd
 import yfinance as yf
-#from datetime import date, timedelta
+from datetime import date, timedelta
 import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-today = "2025-01-01"
+today = date.today()
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
@@ -18,7 +18,7 @@ Created by albertolmw.
 # Select your stocks
 STOCKS=st.sidebar.multiselect("Select your stocks", options=["AAPL", "GOOGL", "AMZN", "MSFT", "TSLA", "META", "NVDA", "PYPL", "NFLX", "INTC"])
 #Select the start date
-start_date = st.sidebar.date_input("Start date") #, min_value="2015-01-01",max_value=today
+start_date = st.sidebar.date_input("Start date", max_value=today)
 
 #Download the data
 PORT=pd.DataFrame()
@@ -26,7 +26,7 @@ for stock in STOCKS:
     PORT[stock]=yf.Ticker(stock).history(start=start_date, end=today).Close
 
 #Number of days
-days = 200 #(today - start_date).days
+days = (today - start_date).days
 #Calculate the returns
 RET = pd.DataFrame()
 for stock in STOCKS:
