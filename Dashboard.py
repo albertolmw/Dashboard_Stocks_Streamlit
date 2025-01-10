@@ -1,11 +1,11 @@
 import pandas as pd
 import yfinance as yf
-from datetime import date, timedelta
+#from datetime import date, timedelta
 import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-today = date.today()
+today = "2025-01-01"
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
