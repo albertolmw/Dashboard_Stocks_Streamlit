@@ -1,3 +1,4 @@
+pip install yfinance==0.2.40
 import pandas as pd
 import yfinance as yf
 from datetime import date, timedelta
