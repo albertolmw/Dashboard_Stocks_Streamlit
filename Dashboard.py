@@ -18,7 +18,7 @@ Created by albertolmw.
 # Select your stocks
 STOCKS=st.sidebar.multiselect("Select your stocks", options=["AAPL", "GOOGL", "AMZN", "MSFT", "TSLA", "META", "NVDA", "PYPL", "NFLX", "INTC"])
 #Select the start date
-start_date = st.sidebar.date_input("Start date", min_value="2015-01-01",max_value=today)
+start_date = st.sidebar.date_input("Start date") #, min_value="2015-01-01",max_value=today
 
 #Download the data
 PORT=pd.DataFrame()
