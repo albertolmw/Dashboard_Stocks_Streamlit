@@ -1,5 +1,7 @@
 # Dashboard_Stocks_Streamlit 📈
 
+link----> https://dashboardstocksapp.streamlit.app/
+
 ![image](https://github.com/user-attachments/assets/8ec0063d-4b1f-41c6-9bf2-a302503b0f28)
 
 ## Introduction
