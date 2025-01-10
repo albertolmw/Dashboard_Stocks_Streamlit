@@ -26,7 +26,7 @@ for stock in STOCKS:
     PORT[stock]=yf.Ticker(stock).history(start=start_date, end=today).Close
 
 #Number of days
-days = (today - start_date).days
+days = 200 #(today - start_date).days
 #Calculate the returns
 RET = pd.DataFrame()
 for stock in STOCKS:
