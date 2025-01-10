@@ -3,5 +3,4 @@ yfinance==0.2.50
 pandas==2.2.3
 seaborn
 matplotlib
-date
 
